@@ -5,10 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ni.edu.uam</groupId>
-    <artifactId>EquiposLaboratorio</artifactId>
+    <artifactId>equiposlaboratorio</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>EquiposLaboratorio</name>
-
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.version>5.12.1</junit.version>
@@ -38,6 +37,16 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.hibernate.orm</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>7.4.14.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.7.13</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -57,11 +66,9 @@
                 <version>0.0.8</version>
                 <executions>
                     <execution>
-                        <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>ni.edu.uam.equiposlaboratorio/ni.edu.uam.equiposlaboratorio.BibliotecaApplication
-                            </mainClass>
+                            <mainClass>ni.edu.uam.equiposlaboratorio/ni.edu.uam.equiposlaboratorio.Launcher</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>
